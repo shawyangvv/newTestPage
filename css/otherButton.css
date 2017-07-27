@@ -1,0 +1,164 @@
+/*Other Button Style*/
+.easGeneralSettingsButton:hover, .pcInterfacesButton:hover, .epInterfacesButton:hover, .pcMSButton:hover{
+  box-shadow: 0 2px 0 #000, 0 2px 0px 2px orange;
+}
+.easGeneralSettingsButton span, .pcInterfacesButton span, .epInterfacesButton span, .pcMSButton span{
+  background: #2b7bb0;
+  display: block;
+  padding: 5px 15px;
+  border-radius: 5px;
+  border: 2px solid #2b7bb0;
+}
+
+.easGeneralSettingsButton:active, .pcInterfacesButton:active, .epInterfacesButton:active, .pcMSButton:active{
+  top: 4px;
+  padding-bottom: 0px;
+  box-shadow: 0 1px 0 #2b7bb0;
+}
+
+.easGeneralSettingsButton, .pcInterfacesButton, .epInterfacesButton, .pcMSButton{
+  margin-top: 10px;
+  margin-left: 34%;
+  width: 220px;
+  text-align: center;
+  position: relative;
+  float: left;
+  margin-right: 10px;
+  text-transform: uppercase;
+  color: white;
+  text-decoration: none;
+  padding-bottom: 3px;
+  border-radius: 5px;
+  box-shadow: 0 2px 0 #2b7bb0;
+  transition: padding 0.1s, box-shadow 0.1s, top 0.1s;
+}
+
+
+.clearfix::after{
+  content:"";
+  clear: both;
+  display: table;
+}
+
+.easGSSubTitle{
+    color: #3B5998;
+    font-weight: 800px;
+    font-size: 20px;
+}
+
+.element-hide{
+    display:none;
+}
+
+.element-show{
+    display: block;
+}
+
+.resetEASServerSettingsbtn, .saveEASServerSettingsbtn{
+  width:85px;
+  border-radius: 8px;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  float: right;
+  margin-left: 20px;
+  position: relative;
+  /*top: 80%;
+  left: 86%*/
+}
+
+.resetEASServerSettingsbtn{
+  padding: 14px 20px;
+  background-color: #f44336;
+  /*left: 78%;*/
+}
+
+
+.easEPMulticastIP{
+    position: absolute;
+    left: 48px;
+    top: 558px;
+}
+
+.easPCMulticastIP{
+    position: absolute;
+    left: 577px;
+    top: 555px;
+}
+
+
+/*Tabs style*/
+#easGStabs{
+  overflow: hidden;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+#easGStabs li{
+  float: left;
+  margin: 0 .5em 0 0;
+}
+
+#easGStabs a{
+  position: relative;
+  background: #ddd;
+  background-image: linear-gradient(to bottom, #fff, #ddd);
+  padding: .7em 3.5em;
+  float: left;
+  text-decoration: none;
+  color: #444;
+  text-shadow: 0 1px 0 rgba(255,255,255,.8);
+  border-radius: 5px 0 0 0;
+  box-shadow: 0 2px 2px rgba(0,0,0,.4);
+}
+
+#easGStabs a:hover,
+#easGStabs a:hover::after,
+#easGStabs a:focus,
+#easGStabsa:focus::after{
+  background: #fff;
+}
+
+#easGStabs a:focus{
+  outline: 0;
+}
+
+#easGStabs a::after{
+  content:'';
+  position:absolute;
+  z-index: 1;
+  top: 0;
+  right: -.5em;
+  bottom: 0;
+  width: 1em;
+  background: #ddd;
+  background-image: linear-gradient(to bottom, #fff, #ddd);
+  box-shadow: 2px 2px 2px rgba(0,0,0,.4);
+  transform: skew(10deg);
+  border-radius: 0 5px 0 0;
+}
+
+#easGStabs #current a,
+#easGStabs #current a::after{
+  background: orange;
+  color: white;
+  z-index: 3;
+}
+
+#easGSContent
+{
+    background: #fff;
+    padding: 2em;
+    height: 220px;
+    position: relative;
+    z-index: 2;
+    border-radius: 0 5px 5px 5px;
+    box-shadow: 0 -2px 3px -2px rgba(0, 0, 0, .5);
+    overflow-y:scroll;
+}
+

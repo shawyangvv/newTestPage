@@ -1,0 +1,46 @@
+/*EMS Button Style*/
+.pcxmlButton:hover, .pcdefaultxmlButton:hover, .routingButton:hover, 
+.networkxmlButton:hover, epdefaultxmlButton:hover, .epxmlButton:hover{
+  box-shadow: 0 2px 0 #000, 0 2px 0px 2px orange;
+}
+.pcxmlButton span, .pcdefaultxmlButton span, .routingButton span, 
+.networkxmlButton span, .epdefaultxmlButton span, .epxmlButton span{
+  background: #3498db;
+  display: block;
+  padding: 5px 15px;
+  border-radius: 5px;
+  border: 2px solid #3498db;
+}
+
+.pcxmlButton:active, .pcdefaultxmlButton:active, .routingButton:active, 
+.networkxmlButton:active, .epdefaultxmlButton:active, .epxmlButton:active{
+  top: 4px;
+  padding-bottom: 0px;
+  box-shadow: 0 1px 0 #3498db;
+}
+
+.pcxmlButton, .pcdefaultxmlButton, .routingButton, 
+.networkxmlButton, .epdefaultxmlButton, .epxmlButton{
+  margin-top: 10px;
+  margin-left: 34%;
+  width: 160px;
+  text-align: center;
+  position: relative;
+  float: left;
+  margin-right: 10px;
+  text-transform: uppercase;
+  color: white;
+  text-decoration: none;
+  padding-bottom: 3px;
+  border-radius: 5px;
+  box-shadow: 0 2px 0 #3498db;
+  transition: padding 0.1s, box-shadow 0.1s, top 0.1s;
+}
+
+
+.clearfix::after{
+  content:"";
+  clear: both;
+  display: table;
+}
+

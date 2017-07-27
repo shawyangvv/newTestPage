@@ -1,0 +1,358 @@
+
+/*Style of the network address Menu*/
+.tab-toggle {
+  position: relative;
+  display: inline-block;
+  color: white;
+  padding: 0.75rem 2rem;
+  margin: 0 auto;
+  background-color: #374d72;
+  border: none;
+  width: 100%;
+  font-weight: bold;
+  font-size: 0.8rem;
+  text-align: center;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.tab-toggle:hover{
+  background-color: #374d72;
+}
+.tab-toggle:hover:before, .tab-toggle:hover:after {
+  color: #4cc4cf;
+}
+.tab-toggle:after, .tab-toggle:before {
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.tab-toggle.active {
+  color: white;
+  background-color: darkorange;
+  cursor: default;
+}
+
+/* ---------------------- Vertical Tabs */
+.networkAddresstabs {
+  position: relative;
+  min-height: 0;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  transition: all 0.5s;
+  margin-bottom: 1px;
+}
+
+  /* ---------------------- Tab Toggle */
+
+@media screen and (min-width: 55rem) {
+  .networkAddresstabs .networkAddresstab {
+    float: left;
+    clear: left;
+    width: 30%;
+  }
+}
+.networkAddresstabs .networkAddresstab .tab-toggle {
+  padding: 1rem 4rem 1rem 2rem;
+  position: relative;
+  outline: none;
+  width: 62%;
+}
+@media screen and (min-width: 55rem) {
+  .networkAddresstabs .networkAddresstab .tab-toggle {
+    text-align: left;
+  }
+}
+  .tab-toggle:after {
+  content: "\25BC";
+  position: absolute;
+  display: block;
+  right: 2rem;
+  top: 50%;
+  -webkit-transform: rotate(0deg) translateY(-50%);
+  -moz-transform: rotate(0deg) translateY(-50%);
+  -ms-transform: rotate(0deg) translateY(-50%);
+  -o-transform: rotate(0deg) translateY(-50%);
+  transform: rotate(0deg) translateY(-50%);
+}
+@media screen and (min-width: 55rem) {
+  .tab-toggle:after {
+    -webkit-transform: rotate(-90deg) translateX(50%);
+    -moz-transform: rotate(-90deg) translateX(50%);
+    -ms-transform: rotate(-90deg) translateX(50%);
+    -o-transform: rotate(-90deg) translateX(50%);
+    transform: rotate(-90deg) translateX(50%);
+  }
+}
+
+.networkAddresstabs .networkAddresstab .tab-toggle.active:after {
+  color: white;
+  -webkit-transform: rotate(180deg) translateY(50%);
+  -moz-transform: rotate(180deg) translateY(50%);
+  -ms-transform: rotate(180deg) translateY(50%);
+  -o-transform: rotate(180deg) translateY(50%);
+  transform: rotate(180deg) translateY(50%);
+}
+@media screen and (min-width: 55rem) {
+  .networkAddresstabs .networkAddresstab .tab-toggle.active:after {
+    -webkit-transform: rotate(-90deg) translateX(50%) translateY(0);
+    -moz-transform: rotate(-90deg) translateX(50%) translateY(0);
+    -ms-transform: rotate(-90deg) translateX(50%) translateY(0);
+    -o-transform: rotate(-90deg) translateX(50%) translateY(0);
+    transform: rotate(-90deg) translateX(50%) translateY(0);
+    right: 1rem;
+  }
+}
+
+.naTabContent {
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 2rem;
+  background-color: #efefef;
+  -webkit-transition: all 1s;
+  -moz-transition: all 1s;
+  transition: all 1s;
+}
+@media screen and (min-width: 55rem) {
+  .naTabContent {
+    max-height: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 70%;
+    opacity: 0;
+    padding: 0rem 2rem 2rem 2rem;
+    -webkit-transform: translateX(100%);
+    -moz-transform: translateX(100%);
+    -ms-transform: translateX(100%);
+    -o-transform: translateX(100%);
+    transform: translateX(100%);
+  }
+}
+.naTabContent.active {
+  max-height: 1000px;
+}
+@media screen and (min-width: 55rem) {
+  .naTabContent.active {
+    max-height: none;
+    opacity: 1;
+    -webkit-transform: none;
+    -moz-transform: none;
+    -ms-transform: none;
+    -o-transform: none;
+    transform: none;
+    position: absolute;
+    left: 187px;
+  }
+}
+.networkAddressheading {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  color: #374d72;
+  text-align: center;
+}
+
+
+/* Style the tab Menu*/
+.networkTabMenu {
+    float: left;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+    width: 12%;
+    height: 95%;
+    overflow-y: scroll;
+}
+
+/* Style the buttons inside the tab */
+.networkTabMenu button {
+    display: block;
+    background-color: inherit;
+    color: black;
+    padding: 22px 16px;
+    width: 100%;
+    border: none;
+    outline: none;
+    text-align: left;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Change background color of buttons on hover */
+.networkTabMenu button:hover {
+    background-color: #ddd;
+}
+
+/* Create an active/current "tab button" class */
+.networkTabMenu button.active {
+    background-color: #ccc;
+    color: darkorange;
+}
+
+/* Style the tab content */
+.tabcontent {
+    float: left;
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    width: 83%;
+    border-left: none;
+    height: 300px;
+    overflow-y:scroll;
+    background-color: white;
+    display: none;
+    height: 550px;
+}
+
+.tabcontent active{
+    float: left;
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    width: 83%;
+    border-left: none;
+    height: 300px;
+    overflow-y:scroll;
+    background-color: white;
+    display: block;
+    height: 550px;
+}
+
+
+
+.networkSubTitle{
+    color: #3B5998;
+    font-weight: 800px;
+    font-size: 20px;
+}
+
+.networkAddressGeneralSettings, .networkAddressRetryPolicy{
+    margin-left: 196px;
+}
+
+.savePCbtn, .removePCbtn, .addNewNAbtn{
+  width:85px;
+  border-radius: 8px;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  float: left;
+  margin-left: 20px;
+  position: relative;
+  left: 42%;
+  top: -25%;
+}
+
+.removePCbtn{
+  background-color: #f44336;
+}
+
+.addNAButton{
+  width: 23px;
+  height: 20px;
+  position: relative;
+  left: 20px;
+}
+
+.removeNAbtn, .saveNAbtn{
+  width:85px;
+  border-radius: 8px;
+  background-color: #4CAF50;
+  color: white;
+  /*padding: 14px 20px;*/
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  float: left;
+  margin-left: 20px;
+  position: relative;
+}
+
+.removeNAbtn{
+  background-color: #f44336;
+}
+
+.addNewPCbtn{
+  width:85px;
+  border-radius: 8px;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  float: left;
+  margin-left: 20px;
+}
+
+.addPCButton{
+  width: 23px;
+  height: 21px;
+  position: absolute;
+  left: 21%;
+  top: 3%;
+}
+
+.modal-content-networkxml{
+    border-radius: 6px;
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 10px;
+    border: 1px solid #888;
+    width: 63%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+}
+
+.clearfix-pc{
+  position: absolute;
+  top: 15%;
+  left: 68%;
+}
+
+.modal-content-newNA{
+    border-radius: 6px;
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 10px;
+    border: 1px solid #888;
+    width: 41%;
+    top:164px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+}
+
+.clearfix-newNA{
+  position: absolute;
+  left: 57%;
+}
+
+.modal-content-newPC{
+    border-radius: 6px;
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 10px;
+    border: 1px solid #888;
+    width: 32%;
+    height: 20%;
+    top: 7%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+}
+
+.clearfix-newPCPopup{
+  margin-left: 60%;
+}

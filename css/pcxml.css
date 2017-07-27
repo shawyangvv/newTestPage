@@ -1,0 +1,131 @@
+/*Access Point Style*/
+.pcxmlContainer .apBox {
+  float: left;
+  width: 150px;
+  margin: 20px;
+}
+
+.pcxmlContainer .apBox .accessPoint {
+  padding: 12px;
+  background-color: #3B5998;
+  color: white;
+  cursor: pointer;
+}
+
+.pcxmlContainer .apBox .apSettings {
+  padding: 12px;
+  background-color: lightgray;
+  color: white;
+  display: none;
+}
+
+.saveAPbtn, .removeAPbtn{
+    width:60px;
+    border-radius: 8px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    float: left;
+    margin-left: 3px;
+}
+
+.savePcXmlbtn {
+  left: 90%;
+  top: 85%;
+  position: absolute;
+  width:85px;
+  border-radius: 8px;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  float: left;
+}
+.removeAPbtn{
+    background-color: #f44336;
+}
+
+.apTitle{
+    width: 100px;
+    background-color: #3B5998;
+    border: none;
+    color: white;
+}
+
+
+.apName{
+    width: 125px !important; 
+    height: 22px; 
+    padding: 0 !important; 
+    margin: 0 !important;
+}
+
+.apID{
+    width: 125px;
+}
+
+.sessionPolicySelector{
+    width: 125px; 
+    height: 22px;
+}
+
+
+.addNewAPbtn{
+  width:85px;
+  border-radius: 8px;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  float: left;
+  margin-left: 20px;
+}
+
+.modal-content-pcxml{
+    border-radius: 6px;
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 60%;
+    height: 50%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+.modal-content-addAPbtn{
+    border-radius: 6px;
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 10px;
+    border: 1px solid #888;
+    width: 36%;
+    height: 27%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+    top: 50px;
+}
+
+.clearfix-newAP{
+    margin-left: 65%;
+    position: absolute;
+    top: 70%;
+}
+
+.newAPContent{
+    position: absolute;
+    left: 30px;
+}

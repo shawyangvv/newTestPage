@@ -1,0 +1,485 @@
+/* Style the tab */
+.epTabMenu {
+    float: left;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+    width: 14%;
+    height: 678px;
+    overflow-y: scroll;
+}
+
+/* Style the buttons inside the tab */
+.epTabMenu button {
+    display: block;
+    background-color: inherit;
+    color: black;
+    padding: 22px 16px;
+    width: 100%;
+    border: none;
+    outline: none;
+    text-align: left;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* Change background color of buttons on hover */
+.epTabMenu button:hover {
+    background-color: #ddd;
+}
+
+/* Create an active/current "tab button" class */
+.epTabMenu button.active {
+    background-color: #ccc;
+    color: darkorange;
+}
+
+/* Style the tab content */
+.tabcontent {
+    float: left;
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    width: 83%;
+    border-left: none;
+    height: 550px;
+    overflow-y:scroll;
+    background-color: white;
+    display: none;
+}
+
+.tabcontent.active{
+    float: left;
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    width: 83%;
+    border-left: none;
+    height: 658px;
+    overflow-y:scroll;
+    background-color: white;
+    display: block;
+}
+
+
+
+.epSubTitle{
+    color: #3B5998;
+    font-weight: 800px;
+    font-size: 20px;
+}
+
+
+.removeEPSessionPolicybtn, .saveEPSessionPolicybtn{
+  width:85px;
+  border-radius: 8px;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  float: left;
+  margin-left: 20px;
+  position: relative;
+  left: 75%;
+  top: 9%;
+}
+
+.removeEPSessionPolicybtn{
+  padding: 14px 20px;
+  background-color: #f44336;
+}
+
+/* ---------------------- Vertical Tabs */
+.pcrtabs, .stationGrouptabs {
+  position: relative;
+  min-height: 0;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  transition: all 0.5s;
+  margin-bottom: 1px;
+}
+
+  /* ---------------------- Tab Toggle */
+
+@media screen and (min-width: 55rem) {
+  .pcrtabs .pcrtab, .stationGrouptabs .sgtab {
+    float: left;
+    clear: left;
+    width: 30%;
+  }
+}
+.pcrtabs .pcrtab .tab-toggle {
+  padding: 1rem 4rem 1rem 2rem;
+  position: relative;
+  outline: none;
+  width: 50%;
+}
+
+
+.stationGrouptabs .sgtab .tab-toggle1{
+  padding: 1rem 4rem 1rem 2rem;
+  position: relative;
+  outline: none;
+  width: 42%;
+}
+
+
+@media screen and (min-width: 55rem) {
+  .pcrtabs .pcrtab .tab-toggle, .stationGrouptabs .sgtab .tab-toggle1 {
+    text-align: left;
+  }
+}
+  .tab-toggle:after, .tab-toggle1:after {
+  content: "\25BC";
+  position: absolute;
+  display: block;
+  right: 2rem;
+  top: 27%;
+  -webkit-transform: rotate(0deg) translateY(-50%);
+  -moz-transform: rotate(0deg) translateY(-50%);
+  -ms-transform: rotate(0deg) translateY(-50%);
+  -o-transform: rotate(0deg) translateY(-50%);
+  transform: rotate(0deg) translateY(-50%);
+}
+@media screen and (min-width: 55rem) {
+  .tab-toggle:after, .tab-toggle1:after {
+    -webkit-transform: rotate(-90deg) translateX(50%);
+    -moz-transform: rotate(-90deg) translateX(50%);
+    -ms-transform: rotate(-90deg) translateX(50%);
+    -o-transform: rotate(-90deg) translateX(50%);
+    transform: rotate(-90deg) translateX(-20%);
+  }
+}
+
+.pcrtabs .pcrtab .tab-toggle.active:after, .stationGrouptabs .sgtab .tab-toggle1.active:after {
+  color: white;
+  -webkit-transform: rotate(180deg) translateY(50%);
+  -moz-transform: rotate(180deg) translateY(50%);
+  -ms-transform: rotate(180deg) translateY(50%);
+  -o-transform: rotate(180deg) translateY(50%);
+  transform: rotate(180deg) translateY(50%);
+}
+
+
+
+
+@media screen and (min-width: 55rem) {
+  .pcrtabs .pcrtab .tab-toggle.active:after, .stationGrouptabs .sgtab .tab-toggle1.active:after {
+    -webkit-transform: rotate(-90deg) translateX(50%) translateY(0);
+    -moz-transform: rotate(-90deg) translateX(50%) translateY(0);
+    -ms-transform: rotate(-90deg) translateX(50%) translateY(0);
+    -o-transform: rotate(-90deg) translateX(50%) translateY(0);
+    transform: rotate(-90deg) translateX(50%) translateY(0);
+    right: 1rem;
+  }
+}
+
+.pcrTabContent {
+  height: 646px;
+  overflow: hidden;
+  padding: 0 2rem;
+  background-color: #efefef;
+  -webkit-transition: all 1s;
+  -moz-transition: all 1s;
+  transition: all 1s;
+}
+
+.sgTabContent{
+  overflow: hidden;
+  padding: 0 2rem;
+  background-color: #B0C4DE;
+  -webkit-transition: all 1s;
+  -moz-transition: all 1s;
+  transition: all 1s;
+}
+
+@media screen and (min-width: 55rem) {
+  .pcrTabContent {
+    max-height: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 80%;
+    opacity: 0;
+    padding: 0rem 2rem 2rem 2rem;
+    -webkit-transform: translateX(100%);
+    -moz-transform: translateX(100%);
+    -ms-transform: translateX(100%);
+    -o-transform: translateX(100%);
+    transform: translateX(100%);
+  }
+
+  .sgTabContent{
+    overflow-y:scroll;
+    max-height: none;
+    position: absolute;
+    left: 120px;
+    top: 0;
+    width: 85%;
+    height: 426px;
+    opacity: 0;
+    padding: 0rem 2rem 2rem 2rem;
+    -webkit-transform: translateX(100%);
+    -moz-transform: translateX(100%);
+    -ms-transform: translateX(100%);
+    -o-transform: translateX(100%);
+    transform: translateX(100%);
+  }
+}
+.pcrTabContent.active, .sgTabContent.active {
+  max-height: 1000px;
+  width: 80%;
+}
+@media screen and (min-width: 55rem) {
+  .pcrTabContent.active, .sgTabContent.active {
+    max-height: none;
+    opacity: 1;
+    -webkit-transform: none;
+    -moz-transform: none;
+    -ms-transform: none;
+    -o-transform: none;
+    transform: none;
+  }
+}
+.pcrheading {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  color: #374d72;
+  text-align: center;
+}
+
+
+/* Style the tab Menu*/
+.pcrtabMenu, .stationGrouptabMenu {
+    float: left;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+    width: 14%;
+    height: 300px;
+    overflow-y: scroll;
+}
+
+/* Style the buttons inside the tab */
+.pcrtabMenu button, .stationGrouptabMenu button {
+    display: block;
+    background-color: inherit;
+    color: black;
+    padding: 22px 16px;
+    width: 100%;
+    border: none;
+    outline: none;
+    text-align: left;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Change background color of buttons on hover */
+.pcrtabMenu button:hover, .stationGrouptabMenu button:hover {
+    background-color: #ddd;
+}
+
+/* Create an active/current "tab button" class */
+.pcrtabMenu button.active, .stationGrouptabMenu button.active {
+    background-color: #ccc;
+    color: darkorange;
+}
+
+/* Style the tab content */
+.tabcontent {
+    float: left;
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    width: 83%;
+    border-left: none;
+    height: 300px;
+    overflow-y:scroll;
+    background-color: white;
+    display: none;
+    height: 550px;
+}
+
+.tabcontent active{
+    float: left;
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    width: 83%;
+    border-left: none;
+    height: 300px;
+    overflow-y:scroll;
+    background-color: white;
+    display: block;
+    height: 550px;
+}
+
+.epmodal-content {
+    border-radius: 6px;
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 76%;
+    height: 85%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+.saveEPbtn, .removeEPbtn{
+  width:85px;
+  border-radius: 8px;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  float: left;
+  margin-left: 20px;
+  position: relative;
+  left: 52%;
+  top: 105%;
+}
+
+.removeEPbtn{
+  background-color: #f44336;
+}
+
+
+
+.oldAddNewSGbtn,.oldAddNewPCRbtn, .addNewEPbtn, .addNewSGbtn, .addNewPCRbtn, .addNewEPSessionPolicybtn, .addNewPCSessionPolicybtn{
+  width:85px;
+  border-radius: 8px;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  float: left;
+  margin-left: 20px;
+}
+
+.tab-toggle1.active {
+  color: white;
+  background-color: darkorange;
+  cursor: default;
+}
+
+/* Modal Content */
+.modal-content-addNewStation {
+    border-radius: 6px;
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 37%;
+    top: 326px;
+    left: 151px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+    padding: 20px;
+    height: 184px;
+}
+.modal-content-addNewPCR{
+    border-radius: 6px;
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 37%;
+    top: 200px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+    padding: 20px;
+    height: 184px;
+}
+
+.modal-content-addNewEndpoint{
+  border-radius: 6px;
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 37%;
+    top:8%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+    padding: 20px;
+    height: 184px;
+}
+.addNewStationGroupTitle, .addNewEndpointTitle, .addNewEndPCRTitle {
+    display: inline-block;
+    float: left;
+    font-family: 'Lato', sans-serif;
+    font-size: 20px;
+    margin-top: 10px;
+    text-transform: uppercase;
+    padding-top: 10px;
+    margin-bottom: 5px;
+}
+
+.sg-clearfix, .ep-clearfix, .pcr-clearfix{
+  margin-left: 62%;
+}
+
+.pcr-clear{
+  position: absolute;
+  top: 95%;
+  left: 83%;
+}
+
+.sg-clear{
+  position: absolute;
+  top: 135%;
+  left: 80%;
+}
+
+.removePCRbtn, .savePCRbtn{
+  width:63px;
+  border-radius: 8px;
+  background-color: #4CAF50;
+  color: white;
+  padding: 5px 5px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  float: left;
+  margin-left: 10px;
+}
+
+.removePCRbtn{
+  background-color: #f44336;
+}
+
+.removeSGbtn, .saveSGbtn{
+  width:63px;
+  border-radius: 8px;
+  background-color: #4CAF50;
+  color: white;
+  padding: 1px 5px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  float: left;
+  margin-left: 10px;
+}
+
+.removeSGbtn{
+  background-color: #f44336;
+}

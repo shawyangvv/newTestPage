@@ -1,0 +1,105 @@
+/* Style the tab */
+.pcDefaultTabMenu {
+    float: left;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+    width: 13%;
+    height: 86%;
+    overflow-y: scroll;
+}
+
+/* Style the buttons inside the tab */
+.pcDefaultTabMenu button {
+    display: block;
+    background-color: inherit;
+    color: black;
+    padding: 22px 16px;
+    width: 100%;
+    border: none;
+    outline: none;
+    text-align: left;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Change background color of buttons on hover */
+.pcDefaultTabMenu button:hover {
+    background-color: #ddd;
+}
+
+/* Create an active/current "tab button" class */
+.pcDefaultTabMenu button.active {
+    background-color: #ccc;
+    color: darkorange;
+}
+
+/* Style the tab content */
+.tabcontent {
+    float: left;
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    width: 83%;
+    border-left: none;
+    height: 550px;
+    overflow-y:scroll;
+    background-color: white;
+    display: none;
+}
+
+.tabcontent.active{
+    float: left;
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    width: 83%;
+    border-left: none;
+    height: 550px;
+    overflow-y:scroll;
+    background-color: white;
+    display: block;
+}
+
+
+
+.pcdefaultxmlSubTitle{
+    color: #3B5998;
+    font-weight: 800px;
+    font-size: 20px;
+}
+
+
+.removePCSessionPolicybtn, .savePCSessionPolicybtn{
+  width:85px;
+  border-radius: 8px;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  float: left;
+  margin-left: 20px;
+  position: relative;
+  left: 75%;
+  top: 2%;
+}
+
+.removePCSessionPolicybtn{
+  padding: 14px 20px;
+  background-color: #f44336;
+}
+
+.modal-content-addPCSessionPolicy{
+    border-radius: 6px;
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 30%;
+    top:6%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}

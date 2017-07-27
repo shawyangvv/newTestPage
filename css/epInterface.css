@@ -1,0 +1,200 @@
+/* Style the tab */
+.epInterfaceTabMenu {
+    float: left;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+    width: 10%;
+    height: 96%;
+    overflow-y: scroll;
+}
+
+/* Style the buttons inside the tab */
+.epInterfaceTabMenu button {
+    display: block;
+    background-color: inherit;
+    color: black;
+    padding: 22px 16px;
+    width: 100%;
+    border: none;
+    outline: none;
+    text-align: left;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Change background color of buttons on hover */
+.epInterfaceTabMenu button:hover {
+    background-color: #ddd;
+}
+
+/* Create an active/current "tab button" class */
+.epInterfaceTabMenu button.active {
+    background-color: #ccc;
+    color: darkorange;
+}
+
+/* Style the tab content */
+.tabcontent {
+    float: left;
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    width: 83%;
+    border-left: none;
+    height: 550px;
+    overflow-y:scroll;
+    background-color: white;
+    display: none;
+}
+
+.tabcontent.active{
+    float: left;
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    width: 83%;
+    border-left: none;
+    height: 550px;
+    overflow-y:scroll;
+    background-color: white;
+    display: block;
+}
+
+/*Route Address Style*/
+.epInterRouteTabs{
+  overflow: hidden;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.epInterRouteTabs li{
+  float: left;
+  margin: 0 .5em 0 0;
+}
+
+.epInterRouteTabs a{
+  position: relative;
+  background: #ddd;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#ddd));
+  background-image: -webkit-linear-gradient(top, #fff, #ddd);
+  background-image: -moz-linear-gradient(top, #fff, #ddd);
+  background-image: -ms-linear-gradient(top, #fff, #ddd);
+  background-image: -o-linear-gradient(top, #fff, #ddd);
+  background-image: linear-gradient(to bottom, #fff, #ddd);  
+  padding: .7em 3.5em;
+  float: left;
+  text-decoration: none;
+  color: #444;
+  text-shadow: 0 1px 0 rgba(255,255,255,.8);
+  -webkit-border-radius: 5px 0 0 0;
+  -moz-border-radius: 5px 0 0 0;
+  border-radius: 5px 0 0 0;
+  -moz-box-shadow: 0 2px 2px rgba(0,0,0,.4);
+  -webkit-box-shadow: 0 2px 2px rgba(0,0,0,.4);
+  box-shadow: 0 2px 2px rgba(0,0,0,.4);
+}
+
+.epInterRouteTabs a:hover,
+.epInterRouteTabs a:hover::after,
+.epInterRouteTabs a:focus,
+.epInterRouteTabs a:focus::after{
+  background: #fff;
+}
+
+.epInterRouteTabs a:focus{
+  outline: 0;
+}
+
+.epInterRouteTabs a::after{
+  content:'';
+  position:absolute;
+  z-index: 1;
+  top: 0;
+  right: -.5em;  
+  bottom: 0;
+  width: 1em;
+  background: #ddd;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#ddd));
+  background-image: -webkit-linear-gradient(top, #fff, #ddd);
+  background-image: -moz-linear-gradient(top, #fff, #ddd);
+  background-image: -ms-linear-gradient(top, #fff, #ddd);
+  background-image: -o-linear-gradient(top, #fff, #ddd);
+  background-image: linear-gradient(to bottom, #fff, #ddd);  
+  -moz-box-shadow: 2px 2px 2px rgba(0,0,0,.4);
+  -webkit-box-shadow: 2px 2px 2px rgba(0,0,0,.4);
+  box-shadow: 2px 2px 2px rgba(0,0,0,.4);
+  -webkit-transform: skew(10deg);
+  -moz-transform: skew(10deg);
+  -ms-transform: skew(10deg);
+  -o-transform: skew(10deg);
+  transform: skew(10deg);
+  -webkit-border-radius: 0 5px 0 0;
+  -moz-border-radius: 0 5px 0 0;
+  border-radius: 0 5px 0 0;  
+}
+
+.epInterRouteTabs #current a{
+  background: #fff;
+  z-index: 3;
+}
+
+.epInterRouteTabs #current a::after{
+  background: #fff;
+  z-index: 3;
+}
+
+/* ------------------------------------------------- */
+
+.epInterRouteSettings
+{
+    background: #fff;
+    padding: 2em;
+	height: 150px;
+	position: relative;
+	z-index: 2;	
+    -moz-border-radius: 0 5px 5px 5px;
+    -webkit-border-radius: 0 5px 5px 5px;
+    border-radius: 0 5px 5px 5px;
+    -moz-box-shadow: 0 -2px 3px -2px rgba(0, 0, 0, .5);
+    -webkit-box-shadow: 0 -2px 3px -2px rgba(0, 0, 0, .5);
+    box-shadow: 0 -2px 3px -2px rgba(0, 0, 0, .5);
+}
+
+.epInterRouteSettings h2, .epInterRouteSettings h3, .epInterRouteSettings p
+{
+    margin: 0 0 15px 0;
+}
+
+.addNewEPInterbtn{
+  width:85px;
+  border-radius: 8px;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  float: left;
+  margin-left: 20px;
+}
+
+.removeEPInterfacebtn, .saveEPInterfacebtn{
+  width:85px;
+  border-radius: 8px;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  float: left;
+  margin-left: 20px;
+  position: relative;
+  left: 81%;
+  top: 3%;
+}
+
+.removeEPInterfacebtn{
+  padding: 14px 20px;
+  background-color: #f44336;
+}

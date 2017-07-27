@@ -1,0 +1,163 @@
+/* Style the tab */
+.routingTabMenu {
+    float: left;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+    width: 14%;
+    height: 560px;
+    overflow-y: scroll;
+}
+
+/* Style the buttons inside the tab */
+.routingTabMenu button {
+    display: block;
+    background-color: inherit;
+    color: black;
+    padding: 22px 16px;
+    width: 100%;
+    border: none;
+    outline: none;
+    text-align: left;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Change background color of buttons on hover */
+.routingTabMenu button:hover {
+    background-color: #ddd;
+}
+
+/* Create an active/current "tab button" class */
+.routingTabMenu button.active {
+    background-color: #ccc;
+    color: darkorange;
+}
+
+/* Style the tab content */
+.tabcontent {
+    float: left;
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    width: 83%;
+    border-left: none;
+    height: 550px;
+    overflow-y:scroll;
+    background-color: white;
+    display: none;
+}
+
+.tabcontent.active{
+    float: left;
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    width: 83%;
+    border-left: none;
+    height: 550px;
+    overflow-y:scroll;
+    background-color: white;
+    display: block;
+}
+
+
+
+.routingSubTitle{
+    color: #3B5998;
+    font-weight: 800px;
+    font-size: 20px;
+}
+
+
+.removeRoutingbtn, .saveRoutingbtn{
+  width:85px;
+  border-radius: 8px;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  float: left;
+  margin-left: 20px;
+  position: relative;
+  left: 75%;
+  top: 30%;
+}
+
+.removeRoutingbtn{
+  padding: 14px 20px;
+  background-color: #f44336;
+}
+
+.addRoutingAddress{
+  width:40px;
+  border-radius: 4px;
+  background-color: #4CAF50;
+  color: white;
+  padding: 5px 5px;
+  margin: 14px 0;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  left: 827px;
+  top: 141px;
+}
+
+.addNewRPbtn{
+  width:85px;
+  border-radius: 8px;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  float: left;
+  margin-left: 20px;
+}
+
+.addRoutingPolicyButton{
+    margin-left: -779px;
+    margin-top: 13px;
+    padding: 10px;
+    height: 30px;
+    width: 30px;
+}
+
+.modal-content-routingxml{
+    border-radius: 6px;
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 57%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+    padding: 20px;
+    height: 70%;
+}
+
+.modal-content-addRPPopup{
+    border-radius: 6px;
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 35%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+    padding: 20px;
+    top: 10%;
+}
+
+.addRPPopup{
+    position: absolute;
+    left: 40px;
+}
