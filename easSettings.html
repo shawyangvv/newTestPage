@@ -1,0 +1,326 @@
+<ul id="easGStabs" class = "easGStabs">
+    <li><a href="#" title="easGeneralSettings">General Settings</a></li>
+    <li><a href="#" title="easThresholdsSettings">Thresholds Settings</a></li>
+</ul>
+
+<div id="easGSContent" class = "easGSContent" style = "height: 80%">
+    <div id="easGeneralSettings" class = "easGeneralSettings">
+        <label class = "easGSSubTitle"> Region </label>
+        <hr/>
+        <label> Configuration of Region: </label>
+        <select class = "easRegionSelector" id = "easRegionSelector">
+        </select>
+        <p></p>
+
+        <label class = "easGSSubTitle"> Server Group </label>
+        <hr/>
+        <label> Failover modal: </label>
+        <select class = "easFailoverModalSelector" id ="easFailoverModalSelector">
+        </select>
+        &nbsp
+        &nbsp
+        &nbsp
+        &nbsp
+        <label> Domain Name: </label>
+        <select class = "easDomainNameSelector" id="easDomainNameSelector">
+        </select>
+        <p></p>
+        <label>Default Gateway IP Address:</label>
+        <input type = "text" class="easGatewayIP">
+        &nbsp
+        &nbsp
+        &nbsp
+        &nbsp
+        <label>Organization Name:</label>
+        <input type = "text" class= "easOrganizationName">
+        &nbsp
+        &nbsp
+        &nbsp
+        &nbsp
+        <label>Organization Unit Name:</label>
+        <input type = "text" class= "easOrganizationUnitName">
+        <p></p>
+        <div class = "clear"> </div>
+
+        <label class = "easGSSubTitle"> Server </label>
+        <hr/>
+        <label>Server Host Name:</label>
+        <input type = "text" class= "easServerHostName">
+        <p></p>
+        
+        <div id="dual-block" class='element-hide'>
+            <label>Server Priority:</label>
+            <select class = "easDualServerPrioritySelector" id="easDualServerPrioritySelector">
+            </select>
+            <p></p>
+        </div>
+
+        <div id="failover-block" class='element-hide'>
+            <label class = "easGSSubTitle"> Configuration of Failover </label>
+            <hr/>
+            <label>Failover Peer Host Name:</label>
+            <input type = "text" class= "easPeerHostName">
+
+            <label style="left: 546px; position: absolute">Prot Number for Multicasting:</label>
+            <input type = "text" class= "easMulticastPortNum" style = "position: absolute; left: 744px; width: 100px;">
+            <p></p>
+
+            <label>Failover Detect Time:</label>
+            <input type = "number" class= "easFailoverDetectTime" style = "width: 80px"> Millisecs
+            
+            <label style= "position: absolute; left: 546px;">Router ICMP Timeout:</label>
+            <input type = "number" class= "easICMPTimeout" style = "width: 60px; position: absolute; left: 696px;"> 
+            <label style="position: absolute; left: 760px"> Millisecs </label>
+            <p></p>
+
+            <label>Heartbeat Message Interval Time:</label>
+            <input type = "number" class= "easHBInterval" style = "width: 72px;"> Millisecs
+           
+            <label style="position: absolute; left: 546px">Allowed Missed Heartbeat Message Number:</label>
+            <input type = "number" class= "easHBMissedNum" style = "width: 70px; position: absolute; left: 843px;"> 
+            <p></p>
+                                         
+            <label>ICMP for Routers on the Endpoint-side</label>
+            <select class = "icmpForRouterSelector" id="icmpForRouterSelector">
+            </select>
+        
+            <label style="position: absolute; left: 546px;">Multicasting on the Endpoint-side </label>
+            <select class = "epMulticastSelector" id="epMulticastSelector" style="position: absolute; left: 780px;">
+            </select>
+            <p></p>
+            
+            <label style="font-weight: bold">Endpoint-side Multicast IP Address:</label>
+            <p></p>
+            <div class = "easEPMulticastIP" id = "easEPMulticastIP">
+                IP Address: <input type="text" class = "newEPMulticastIPInput" id = "newEPMulticastIPInput"/>
+                <input type="button" value="Add" class = "addNewEPMCIPAddress" id = "addNewEPMCIPAddress"/>
+                <p></p>
+                <table id="easEPMulticasttableID" border="1" align="center" width="60%">
+                    <thead>
+                        <tr>
+                            <th style = "width: 130px; text-align: center;">IP Address</th>
+                            <th style = "width: 80px; text-align: center;">  </th>
+                        </tr>
+                    </thead>
+                    <tbody id="easEPMulticasttbodyID" class = "easEPMulticasttbodyID">   
+                    </tbody>
+                </table>
+            </div>
+            &nbsp
+            &nbsp
+            &nbsp
+            &nbsp
+            
+            <label style = "left: 548px; position: absolute; top: 525px; font-weight: bold">Visa-side Multicast IP Address:</label>
+            <p></p>
+            <div class = "easPCMulticastIP" id = "easPCMulticastIP">
+                IP Address: <input type="text" class = "newPCMulticastIPInput" id = "newPCMulticastIPInput"/>
+                <input type="button" value="Add" class = "addNewPCMCIPAddress" id = "addNewPCMCIPAddress"/>
+                <p></p>
+                <table id="easPCMulticasttableID" border="1" align="center" width="60%">
+                    <thead>
+                        <tr>
+                            <th style = "width: 130px; text-align: center;">IP Address</th>
+                            <th style = "width: 80px; text-align: center;">  </th>
+                        </tr>
+                    </thead>
+                    <tbody id="easPCMulticasttbodyID" class = "easPCMulticasttbodyID">   
+                    </tbody>
+                </table>
+            </div>
+        </div>        
+        
+
+        <div class = "clear"> </div>
+        <div class = "clearfix"></div>
+        <input  type = "reset" class = "resetEASServerSettingsbtn"></input>
+        <button type = "save" class = "saveEASServerSettingsbtn" id = "saveEASServerSettingsbtn"> Save </button>
+    </div>
+
+    <div id="easThresholdsSettings" class = "easThresholdsSettings">
+        <label class = "easGSSubTitle"> General Thresholds Settings </label>
+        <hr/>
+        <label> The Min Online CPU Count: </label>
+        <input type = "number" class="minCPUCount" sytle = "width: 80px">
+        &nbsp
+        &nbsp
+        &nbsp
+        &nbsp
+        &nbsp
+        &nbsp
+        &nbsp
+        &nbsp
+        &nbsp
+        &nbsp
+        &nbsp
+        &nbsp
+        <label> The Min CPU Idle: </label>
+        <input type = "number" class="minCPUIdle" sytle = "width: 80px">%
+        &nbsp
+        &nbsp
+        &nbsp
+        &nbsp
+        &nbsp
+        &nbsp
+        &nbsp
+        &nbsp
+        &nbsp
+        &nbsp
+        &nbsp
+        <label> The Min Free Memory: </label>
+        <input type = "number" class="minFreeMemory" sytle = "width: 80px">
+        <p></p>
+
+        <label> The Max CPU Kernel: </label>
+        <input type = "number" class="maxCPUKernel" sytle = "width: 80px">
+        &nbsp
+        &nbsp
+        &nbsp
+        &nbsp
+        &nbsp
+        &nbsp
+        &nbsp
+        &nbsp
+        &nbsp
+        &nbsp
+        &nbsp
+        &nbsp
+        &nbsp
+        &nbsp
+        &nbsp
+        &nbsp
+        &nbsp
+        &nbsp
+        <label> The Max CPU User: </label>
+        <input type = "number" class="maxCPUUser" sytle = "width: 80px">    
+        &nbsp
+        &nbsp
+        &nbsp
+        &nbsp
+        &nbsp
+        &nbsp
+        &nbsp
+        &nbsp
+        &nbsp
+        &nbsp
+        &nbsp
+        <label> The Alert Sampling Count: </label>
+        <input type = "number" class="alertSamplingCount" sytle = "width: 80px">
+        <p></p>
+
+        <label> The Partition Alert Sampling Count: </label>
+        <input type = "number" class="partitionAlertCount" sytle = "width: 80px">
+        &nbsp
+        &nbsp
+        &nbsp
+        &nbsp
+        &nbsp
+        &nbsp
+        <label> The Partition Max Utilization: </label>
+        <input type = "number" class="partitionMaxUtilization" sytle = "width: 80px">
+        &nbsp
+        &nbsp
+        &nbsp
+        &nbsp
+        <label> The Network Alert Sampling Count </label>
+        <input type = "number" class="networkAlertSamplingCount" sytle = "width: 80px">
+        <p></p>
+        <label> The Time Interval to Load Alerts to Event Console: </label>
+        <input type = "number" class="loadTimeInterval" sytle = "width: 80px"> Seconds
+        &nbsp
+        &nbsp
+        &nbsp
+        &nbsp
+        <label> The Time Interval to Check for New Alert Files: </label>
+        <input type = "number" class="checkAlertFilesInterval" sytle = "width: 80px"> Seconds
+        <p></p>
+
+        <label class = "easGSSubTitle"> Process Thresholds Settings </label>
+        <hr/>
+        <table id="easProcessThresholdsTable" border="1" align="center" width="60%">
+            <thead>
+                <tr>
+                    <th style = "width: 80px; text-align: center;">Process Name</th>
+                    <th style = "width: 80px; text-align: center;">Max CPU(%)</th>
+                    <th style = "width: 80px; text-align: center;">Max Memory(%)</th>
+                    <th style = "width: 80px; text-align: center;">Alert Sampling Count</th>
+                    
+                </tr>
+            </thead>
+            <tbody id="easProcessThresholdsTbody" class = "easProcessThresholdsTbody">   
+                <tr data-location = "0">
+                    <th data-colonum = "0"> slapd </th>
+                    <th data-colonum = "1"> 25 </th>
+                    <th data-colonum = "2"> 25 </th>
+                    <th data-colonum = "3"> 1 </th>
+                </tr>
+                <tr data-location = "1">
+                    <th data-colonum = "0"> syslog-ng </th>
+                    <th data-colonum = "1"> 25 </th>
+                    <th data-colonum = "2"> 25 </th>
+                    <th data-colonum = "3"> 1 </th>
+                </tr>
+                <tr data-location = "2">
+                    <th data-colonum = "0"> cron </th>
+                    <th data-colonum = "1"> 25 </th>
+                    <th data-colonum = "2"> 25 </th>
+                    <th data-colonum = "3"> 1 </th>
+                </tr>
+                <tr data-location = "3">
+                    <th data-colonum = "0"> xntpd </th>
+                    <th data-colonum = "1"> 25 </th>
+                    <th data-colonum = "2"> 25 </th>
+                    <th data-colonum = "3"> 1 </th>
+                </tr>
+                <tr data-location = "4">
+                    <th data-colonum = "0"> stunnel </th>
+                    <th data-colonum = "1"> 25 </th>
+                    <th data-colonum = "2"> 25 </th>
+                    <th data-colonum = "3"> 1 </th>
+                </tr>
+                <tr data-location = "5">
+                    <th data-colonum = "0"> postgres </th>
+                    <th data-colonum = "1"> 25 </th>
+                    <th data-colonum = "2"> 25 </th>
+                    <th data-colonum = "3"> 1 </th>
+                </tr>
+                <tr data-location = "6">
+                    <th data-colonum = "0"> efsserver </th>
+                    <th data-colonum = "1"> 25 </th>
+                    <th data-colonum = "2"> 25 </th>
+                    <th data-colonum = "3"> 1 </th>
+                </tr>
+                <tr data-location = "7"> 
+                    <th data-colonum = "0"> emsserver </th>
+                    <th data-colonum = "1"> 25 </th>
+                    <th data-colonum = "2"> 25 </th>
+                    <th data-colonum = "3"> 1 </th>
+                </tr>
+                <tr data-location = "8">
+                    <th data-colonum = "0"> mgserver </th>
+                    <th data-colonum = "1"> 25 </th>
+                    <th data-colonum = "2"> 25 </th>
+                    <th data-colonum = "3"> 1 </th>
+                </tr>
+                <tr data-location = "9">
+                    <th data-colonum = "0"> edgeui </th>
+                    <th data-colonum = "1"> 25 </th>
+                    <th data-colonum = "2"> 25 </th>
+                    <th data-colonum = "3"> 1 </th>
+                </tr>
+                <tr data-location = "10">
+                    <th data-colonum = "0"> idm </th>
+                    <th data-colonum = "1"> 25 </th>
+                    <th data-colonum = "2"> 25 </th>
+                    <th data-colonum = "3"> 1 </th>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+
+
+
+</div>
+
+ 
