@@ -1,0 +1,833 @@
+
+<link rel = "stylesheet" href = "/css/updateMainPage.css">
+<link rel = "stylesheet" href = "/css/efsStyle.css">
+<link rel = "stylesheet" href = "/css/emsStyle.css">
+
+<link rel = "stylesheet" href = "/css/routingxml.css">
+<link rel = "stylesheet" href = "/css/otherButton.css">
+<link rel = "stylesheet" href = "/css/pcxml.css">
+<link rel = "stylesheet" href = "/css/pcdefault.css">
+<link rel = "stylesheet" href = "/css/pcInterface.css">
+<link rel = "stylesheet" href = "/css/epInterface.css">
+<link rel = "stylesheet" href = "/css/epdefault.css">
+<link rel = "stylesheet" href = "/css/pcMS.css">
+
+
+<link rel = "stylesheet" href = "/css/epxml.css">
+
+<link rel = "stylesheet" href = "/css/networkxml.css">
+
+<link rel = "stylesheet" href = "/css/submitPage.css">
+
+<link rel = "stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+
+<div class="window window__osx" id = "window window__osx">
+  <!--Synchronize indicator-->
+  <header class="window--header">
+    <div class="sync-indicator">
+      <h6 class="sync-title"></h6>
+      <svg class="sync-progress" viewBox="0 0 48 48">
+        <circle cx="24" cy="24" r="20" fill="none"></circle>
+      </svg>
+    </div>
+    <!--/ Synchronize indicator-->
+  </header>
+  
+  <div class="window-content" id = "window-content">
+     <svg class= "intro-logo"
+          viewBox="0 0 500.00001 162.81594"
+          height="162.81593"
+          width="500">
+      <defs id="defs10308">
+        <clipPath id="clipPath10271" clipPathUnits="userSpaceOnUse">
+          <path id="visaLogo" 
+                d="m 413.742,90.435 c -0.057,-4.494 4.005,-7.002 7.065,-8.493 3.144,-1.53 4.2,-2.511 4.188,-3.879 -0.024,-2.094 -2.508,
+			            -3.018 -4.833,-3.054 -4.056,-0.063 -6.414,1.095 -8.289,1.971 l -1.461,-6.837 c 1.881,-0.867 5.364,
+			            -1.623 8.976,-1.656 8.478,0 14.025,4.185 14.055,10.674 0.033,8.235 -11.391,8.691 -11.313,12.372 0.027,
+			            1.116 1.092,2.307 3.426,2.61 1.155,0.153 4.344,0.27 7.959,-1.395 l 1.419,6.615 c -1.944,0.708 -4.443,
+			            1.386 -7.554,1.386 -7.98,0 -13.593,-4.242 -13.638,-10.314 			
+                  m 34.827,9.744 c -1.548,0 -2.853,-0.903 -3.435,-2.289 l -12.111,-28.917 8.472,0 1.686,4.659 10.353,0 0.978,-4.659 7.467,0 -6.516,31.206 -6.894,0 
+                  m 1.185,-8.43 2.445,-11.718 -6.696,0 4.251,11.718 
+                  m -46.284,8.43 -6.678,-31.206 8.073,0 6.675,31.206 -8.07,0 
+                  m -11.943,0 -8.403,-21.24 -3.399,18.06 c -0.399,2.016 -1.974,3.18 -3.723,3.18 l -13.737,0 -0.192,-0.906 c 2.82,-0.612 6.024,-1.599 7.965,-2.655 1.188,-0.645 1.527,-1.209 1.917,-2.742 l 6.438,-24.903 8.532,0 13.08,31.206 -8.478,0" />
+        </clipPath>
+        <linearGradient id="linearGradient10277" spreadMethod="pad"
+                gradientTransform="matrix(84.1995,31.0088,31.0088,-84.1995,19.512,-27.4192)"
+                gradientUnits="userSpaceOnUse"
+                y2="0"
+                x2="1"
+                y1="0"
+                x1="0">
+          <stop id="stop10279"
+                offset="0"
+                style="stop-opacity:1;stop-color:#222357" />
+          <stop id="stop10281"
+                offset="1"
+                style="stop-opacity:1;stop-color:#254aa5" />
+        </linearGradient>
+      </defs>
+        <g transform="translate(-333.70157,-536.42431)"
+          id="layer1">
+          <g id="g10267"
+            transform="matrix(4.9846856,0,0,-4.9846856,-1470.1185,1039.6264)">
+            <g clip-path="url(#clipPath10271)"
+              id="g10269">
+              <g transform="translate(351.611,96.896)"
+                id="g10275">
+                <path id="path10283"
+                      style="fill:url(#linearGradient10277);fill-opacity:1;fill-rule:nonzero;stroke:none"
+                      d="M 0,0 98.437,36.252 120.831,-24.557 22.395,-60.809" />
+              </g>
+            </g>
+          </g>
+        </g>
+    </svg>
+    <!--/ visa logo SVG-->
+
+    <div class="welcome-screen" id="welcome-screen">
+      <h2 class="greeting" style = " margin-top: -218px;">Update Configuration</h2>
+      
+      <h2 class = "versionInfo">Current Activated Version on s172easup08 is Config_eas_9.8.016.</h2>
+      <ul class="options">
+        <li class="option">
+          <label for="endpoint"></label>
+          <img class="option--icon" src = "/images/endpoint.png"/>
+          <h4 class="option--title">EndPoint</h4>
+          <a href = "#" class = "ftpButton" id = "ftpButton">
+            <span>
+               <i class = "fa fa-file-text-o" style = "color:white; position: absolute; left: 10px; top: 8px;"> </i> 
+                FTP
+            </span>
+          </a>
+
+          <a href = "#" class = "epxmlButton" id = "epxmlButton" style="top: 25px">
+            <span>
+               <i class = "fa fa-user-secret" style = "color:white; position: absolute; left: 10px; top: 8px;"> </i> 
+                ep.xml
+            </span>
+          </a>
+          <a href = "#" class = "epdefaultxmlButton" id = "epdefaultxmlButton" style="top: 59px">
+            <span>
+               <i class = "fa fa-user-secret" style = "color:white; position: absolute; left: 10px; top: 8px;"> </i> 
+                epdefault.xml
+            </span>
+          </a>
+
+          <a href = "#" class = "epInterfacesButton" id = "epInterfacesButton" style="top: 95px">
+            <span>
+               <i class = "fa fa-exchange" style = "color:white; position: absolute; left: 10px; top: 8px;"> </i> 
+                Interface(s)
+            </span>
+          </a>
+        </li>
+        <li class="option">
+          <label for="EAS"></label>
+          <img class = "option--icon" src = "/images/server.png"/>
+          <h4 class="option--title">EAS</h4>
+          <a href = "#" class = "efsButton" id = "efsButton">
+            <span>
+               <i class = "fa fa-file-text-o" style = "color:white; position: absolute; left: 10px; top: 8px;"> </i> 
+                EFS 
+            </span>
+          </a>
+          <a href = "#" class = "routingButton" id = "routingButton" style="top: 62px">
+            <span>
+               <i class = "fa fa-user-secret" style = "color:white; position: absolute; left: 10px; top: 8px;"> </i> 
+                routing.xml 
+            </span>
+          </a>
+          <a href = "#" class = "easGeneralSettingsButton" id = "easGeneralSettingsButton" style="top: 138px">
+            <span>
+               <i class = "fa fa-cogs" style = "color:white; position: absolute; left: 10px; top: 8px;"> </i> 
+                General Settings
+            </span>
+          </a>
+        </li>
+        <li class="option">
+          <label for="newHost"></label>
+          <img class="option--icon" src = "/images/pc.png"/>
+          <h4 class="option--title">Processing Center</h4>
+          <a href = "#" class = "aftpButton" id = "aftpButton">
+            <span>
+               <i class = "fa fa-file-text-o" style = "color:white; position: absolute; left: 10px; top: 8px;"> </i> 
+                AFTP
+            </span>
+          </a>
+          <a href = "#" class = "pcxmlButton" id = "pcxmlButton">
+            <span>
+               <i class = "fa fa-user-secret" style = "color:white; position: absolute; left: 10px; top: 8px;"> </i> 
+                pc.xml
+            </span>
+          </a>
+          <a href = "#" class = "pcdefaultxmlButton" id = "pcdefaultxmlButton">
+            <span>
+               <i class = "fa fa-user-secret" style = "color:white; position: absolute; left: 10px; top: 8px;"> </i> 
+                pcdefault.xml
+            </span>
+          </a>
+           <a href = "#" class = "networkxmlButton" id = "networkxmlButton">
+            <span>
+               <i class = "fa fa-user-secret" style = "color:white; position: absolute; left: 10px; top: 8px;"> </i> 
+                network.xml
+            </span>
+          </a>
+
+          <a href = "#" class = "pcInterfacesButton" id = "pcInterfacesButton">
+            <span>
+               <i class = "fa fa-exchange" style = "color:white; position: absolute; left: 10px; top: 8px;"> </i> 
+                Interface(s)
+            </span>
+          </a>
+          <a href = "#" class = "pcMSButton" id = "pcMSButton">
+            <span>
+               <i class = "fa fa-cogs" style = "color:white; position: absolute; left: 10px; top: 8px;"> </i> 
+                Management Systems
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <!-- /window-content -->
+    <!--Save Draft Button-->
+    <div id = "saveDraftButton" class = "saveDraftButton">
+        <span> Save Draft </span>
+    </div>
+    <!--/ Save Draft Button-->
+    <!--Submit Button-->
+    <div id = "submitButton" class = "submitButton" style="margin-top: -62px; margin-left: 900px;">
+        <span> Submit </span>
+    </div>
+    <!--/ Submit Button-->
+  </div>
+</div>
+
+  
+
+    <!--EFS Pop Up-->
+    <div id = 'efsbtn' class = "modal">                                   
+        <span onclick = "document.getElementById('efsbtn').style.display = 'none';" 
+            class = "close" title = "closeModal">x</span>
+            <form class = "modal-content animate"  style = "width: 1000px;">
+                <div class="title_content" style="float: none;">
+                    <div class="text_content">EFS settings</div>
+                    <div class="clear"></div>
+                </div>
+                  <div class = "efsContainer">
+                      <label>Garbage Collector Purge Interval:</label>
+                      <input type = "number" class="purgeInterval">
+                      <p></p>
+                      <label>Garbage Collector Purege Delay:</label>
+                      <input type = "number" class= "purgeDelay" style = "margin-left: 5px;">
+                      <p></p>
+                      <label>Application Log Level:</label>
+                      <select class = "logLevel" style = "margin-left: 73px; width: 175px;">
+                          <option value = "ERROR"> ERROR</option>
+                          <option value = "WARNING"> WARNING</option>
+                          <option value = "INFO"> INFO</option>
+                          <option value = "DEBUG"> DEBUG</option>
+                      </select>
+                      <p></p>
+                      <div class = "clear"> </div>
+                      <label> Block the inventory control files from APF:</label>
+                      <select class="blockInventorySelector" style = "margin-left: 60px;">
+                          <option value = 'Y'> YES</option>
+                          <option value = 'N'> NO</option>
+                      </select>
+                      <p></p>
+                      <div class = "clear"> </div>
+                      <div class = "clearfix">
+                          <input  type = "reset" class = "resetbtn"></input>
+                          <button type = "save" class = "saveEFSbtn" id = "saveEFSbtn"> Save </button>
+                      </div>
+                  </div>                         
+            </form>       
+    </div>
+    <!--/ EFS Pop Up-->
+
+    <!--FTP Pop Up-->
+    <div id = 'ftpbtn' class = "modal">                                   
+        <span onclick = "document.getElementById('ftpbtn').style.display = 'none';" 
+            class = "close" title = "closeModal">x</span>
+            <form class = "modal-content animate" style = "height: 350px; width: 1200px;">
+                <div class="title_content" style="float: none;">
+                    <div class="text_content">FTP Service</div>
+                    <div class="clear"></div>
+                </div>
+                  <div class = "ftpContainer" style = "padding: 20px">
+                      <label>Greeting Message for the FTP Service:</label>
+                      <input type = "text" class="greetingMessage" style = "width: 400px">
+                      <p></p>
+                      <label>Control Connection Timeout:</label>
+                      <input type = "number" class= "controlTimeout" style = "margin-left: 10px; width: 100px; margin-right: 10px;">Seconds
+                      <p></p>
+                      <label>Data Connection Timeout:</label>
+                      <input type = "number" class= "dataTimeout" style = "margin-left: 27px; width: 100px; margin-right: 10px;">Seconds
+                      <p></p>
+                      <label>Send Socket Buffer Size:</label>
+                      <input type = "number" class= "sendSize" style = "margin-left: 42px; width: 100px; margin-right: 10px;"> Bytes
+                      <p></p>
+                      <label>Receive Socket Buffer Size:</label>
+                      <input type = "number" class= "receiveSize" style = "margin-left: 24px; width: 100px; margin-right: 10px;"> Bytes
+                      <p></p>
+                      
+                      <input  type = "reset" class = "resetbtn" style = "margin-left: 729px;"></input>
+                      <button type = "save" class = "saveFTPbtn" id = "saveFTPbtn" style = "margin-left: 31px;"> Save </button>
+                    </div>
+                  </div>                         
+            </form>       
+    </div>
+    <!--/ FTP Pop Up-->
+
+    <!--AFTP Pop Up-->
+      <div id = 'aftpbtn' class = "modal">                                   
+        <span onclick = "document.getElementById('aftpbtn').style.display = 'none';" 
+            class = "close" title = "closeModal">x</span>
+            <form class = "modal-content-aftp animate" >
+                <div class="title_content" style="float: none;">
+                    <div class="text_content">AFTP Service</div>
+                    <div class="clear"></div>
+                </div>
+                  <div class = "aftpContainer" style = "padding-bottom: 82px; padding-left: 20px;">
+                      <label>AFTP Connection to VIC Timeout:</label>
+                      <input type = "number" class="connectionTimeout" style = "margin-left: 10px; width: 100px; margin-right: 10px;"> Seconds
+                      <p></p>
+                      <label>Send Socket Buffer Size:</label>
+                      <input type = "number" class= "sendSize" style = "margin-left: 70px; width: 100px; margin-right: 10px;"> Bytes
+                      <p></p>
+                      <label>Receive Socket Buffer Size:</label>
+                      <input type = "number" class= "receiveSize" style = "margin-left: 53px; width: 100px; margin-right: 10px;"> Bytes
+                      <p></p>
+                      <label style = "position: absolute; left: 20px">Perform FQDN Check for AFTP:</label>
+                      <select class = "fqdnCheckSelector" style = "margin-left: -704px; width: 100px;">
+                          <option value = "Y"> YES</option>
+                          <option value = "N"> NO</option>
+                      </select>
+                      <input  type = "reset" class = "resetbtn" style = "margin-left: 729px; margin-top: 50px"></input>
+                      <button type = "save" class = "saveAFTPbtn" id = "saveAFTPbtn" style = "margin-left: 31px; margin-top: 50px"> Save </button>
+                    </div>
+                  </div>                         
+            </form>       
+      </div>
+    <!--/ AFTP Pop Up-->
+  
+    <!--pc.xml Pop Up-->
+      <div id = 'pcxmlbtn' class = "modal">                                   
+        <span onclick = "document.getElementById('pcxmlbtn').style.display = 'none';" 
+            class = "close" title = "closeModal">x</span>
+            <form class = "modal-content-pcxml animate">
+                <div class="title_content" style="float: none;">
+                    <div class="text_content">Access Point Configuration</div>
+                    <button class = "addAPButton"
+                            id = "newAPButton"
+                            style = " margin-top: 17px; position: absolute; left: 31%; width: 25px; height: 25px;">
+                    <i class = "fa fa-plus-square" style = "color: #3498db"> </i>
+                    </button>
+                </div>
+                <div class = "popUpContainer">
+                <div class="pcxmlContainer" id = "pcxmlContainer">
+                </div>  
+            </form>       
+        </div>
+      </div>
+    <!--/ pc.xml Pop Up-->
+
+    <!--pcdefault.xml Pop Up-->
+      <div id = 'pcdefaultxmlbtn' class = "modal">                                   
+        <span onclick = "document.getElementById('pcdefaultxmlbtn').style.display = 'none';" 
+            class = "close" title = "closeModal">x</span>
+            <form class = "modal-content animate" style = "height: 76%; width: 62%">
+                <div class="title_content" style="float: none;">
+                    <div class="text_content">Processing Center Policy Configuration</div>
+                        <button class = "addPCSessionPolicyButton"
+                            id = "addPCSessionPolicyButton" style = "left: 43%; position: absolute; top: 20px; width: 24px; height: 20px">
+                        <i class = "fa fa-plus-square" style = "color: #3498db"> </i>
+                        </button>
+                </div>
+                <div class="pcdefaultxmlContainer" id = "pcdefaultxmlContainer" style="padding-left: 10px;">
+                    <div class="pcDefaultTabMenu" id = "pcDefaultTabMenu">
+                    </div>
+                    <div class = "pcDefaultTabContentContainer" id = "pcDefaultTabContentContainer">
+                    </div>
+                </div>
+            </form>       
+      </div>
+    <!--/ pcdefault.xml Pop Up-->    
+
+    <!--epdefault.xml Pop Up-->
+      <div id = 'epdefaultxmlbtn' class = "modal">                                   
+        <span onclick = "document.getElementById('epdefaultxmlbtn').style.display = 'none';" 
+            class = "close" title = "closeModal">x</span>
+            <form class = "modal-content animate" style = "height: 76%; width: 70%; padding-left: 10px">
+                <div class="title_content" style="float: none;">
+                    <div class="text_content">Endpoint Policy Configuration</div>
+                        <button class = "addEPSessionPolicyButton"
+                            id = "addEPSessionPolicyButton" style = "position: relative; left: -32%; margin-top: 20px; height:20px">
+                        <i class = "fa fa-plus-square" style = "color: #3498db"> </i>
+                        </button>
+                </div>
+                <div class="epdefaultxmlContainer" id = "epdefaultxmlContainer">
+                    <div class="epDefaultTabMenu" id = "epDefaultTabMenu">
+                    </div>
+                    <div class = "epDefaultTabContentContainer" id = "epDefaultTabContentContainer">
+                    </div>
+                </div>
+            </form>       
+      </div>
+    <!--/ epdefault.xml Pop Up--> 
+
+    <!--routing.xml Pop Up-->
+      <div id = 'routingbtn' class = "modal">                                   
+        <span 
+            class = "close" id = "close">x</span>
+            <form class = "modal-content-routingxml animate">
+                <div class="title_content" style="float: none;">
+                    <div class="text_content">EMS Routing Policy</div>
+                    <button class = "addRoutingPolicyButton"
+                            id = "addRoutingPolicyButton">
+                    <i class = "fa fa-plus-square" style = "color: #3498db"> </i>
+                    </button>
+                </div>
+                <div class="routingContainer" id = "routingContainer" style ="height: 580px">
+                    <div class="routingTabMenu" id = "routingTabMenu">
+                    </div>
+                    <div class = "routingTabContentContainer" id = "routingTabContentContainer">
+                    </div>
+                </div>
+            </form>       
+      </div>
+    <!--/ routing.xml Pop Up-->  
+
+     <!--ep Interfaces Pop Up-->
+      <div id = 'epInterfacesbtn' class = "modal">                                   
+        <span onclick = "document.getElementById('epInterfacesbtn').style.display = 'none';" 
+            class = "close" id = "close">x</span>
+            <form class = "modal-content animate" style="width: 70%; top: 7%;">
+                <div class="title_content" style="float: none;">
+                    <div class="text_content">EP-side Interface(s)</div>
+                    <button class = "addEPInterfaceButton"
+                            id = "addEPInterfaceButton"
+                            style="position: relative; left:-39%; margin-top: 17px; width: 25px; height: 25px;">
+                    <i class = "fa fa-plus-square" style = "color: #3498db"> </i>
+                    </button>
+                </div>
+                <div class="epInterfaceContainer" id = "epInterfaceContainer" style ="height: 66%; padding-left: 10px; position: relative;">
+                    <div class="epInterfaceTabMenu" id = "epInterfaceTabMenu">
+                    </div>
+                    <div class = "epInterfaceTabContentContainer" id = "epInterfaceTabContentContainer">
+                    </div>
+                </div>
+            </form>       
+      </div>
+    <!--/ ep Interface Pop Up-->
+
+    <!--Add New EP Interface-->
+    <div id="addEPInterfacebtn" class="modal">
+        <span onclick = "document.getElementById('addEPInterfacebtn').style.display = 'none'"
+                class = "close" title = "closeModal">x</span>
+            <form class = "modal-content animate" style="position: relative; width: 34%; height: 38%; margin-top: 6%;">
+                <div class = "newEPInterContainer" id = "newEPInterContainer">
+                    <div class = "title_content">
+                        <div class = "text_content">Add New EP-side Interface</div>
+                        <div class = "clear"></div>
+                    </div>
+                    <div class = "newEPInterContent" style="padding-left: 20px">
+                        <label> Endpoint-side Interface Name:</label>
+                        &nbsp
+                        <input placeholder = "Enter EP-side Interface Name" name = "newEPInterName" 
+                            id = "newEPInterName" class = "newEPInterName" required style="position: relative; width:184px">
+                        <p></p>
+                        <label> Gateway IP Address:</label>
+                        &nbsp
+                        <input placeholder = "Enter Gateway IP Address" name = "newEPInterGatewayIP" 
+                            id = "newEPInterGatewayIP" class = "newEPInterGatewayIP" required style="position: relative; width: 184px; left:66px">
+                        <p></p>
+                        <label> Local Interface IP Address: </label>
+                        &nbsp
+                        <input placeholder = "Enter Interface IP Address" name = "newEPInterLocalIP" 
+                            id = "newEPInterLocalIP" class = "newEPInterLocalIP" required style="position: relative; width: 184px; left: 27px">
+                        <p></p>
+                        
+                    </div>
+                       
+                    <div class ="clearfix" style="position: relative; margin-left: 65%; top: 70%">
+                        <input  type = "reset" class = "resetbtn"></input>
+                        <button class = "addNewEPInterbtn" id = "addNewEPInterbtn">Add</button>
+                                               
+                    </div>
+                </div>
+            </form>  
+        </div>
+    <!--/. Add New EP Interface-->
+
+
+     <!--pc Interfaces Pop Up-->
+      <div id = 'pcInterfacesbtn' class = "modal">                                   
+        <span onclick = "document.getElementById('pcInterfacesbtn').style.display = 'none';" 
+            class = "close" id = "close">x</span>
+            <form class = "modal-content animate" style="width: 70%; top: 7%;">
+                <div class="title_content" style="float: none;">
+                    <div class="text_content">PC-side Interface(s)</div>
+                    <button class = "addPCInterfaceButton"
+                            id = "addPCInterfaceButton"
+                            style="position: relative; left:-39%; margin-top: 17px; width: 25px; height: 25px;">
+                    <i class = "fa fa-plus-square" style = "color: #3498db"> </i>
+                    </button>
+                </div>
+                <div class="pcInterfaceContainer" id = "pcInterfaceContainer" style ="height: 66%; padding-left: 10px; position: relative;">
+                    <div class="pcInterfaceTabMenu" id = "pcInterfaceTabMenu">
+                    </div>
+                    <div class = "pcInterfaceTabContentContainer" id = "pcInterfaceTabContentContainer">
+                    </div>
+                </div>
+            </form>       
+      </div>
+    <!--/ PC Interface Pop Up--> 
+ 
+    <!--Add New PC Interface-->
+        <div id="addPCInterfacebtn" class="modal">
+            <span onclick = "document.getElementById('addPCInterfacebtn').style.display = 'none'"
+                class = "close" title = "closeModal">x</span>
+            <form class = "modal-content animate" style="position: relative; width: 34%; height: 29%; margin-top: 6%;">
+                <div class = "newPCInterContainer" id = "newPCInterContainer">
+                    <div class = "title_content">
+                        <div class = "text_content">Add New PC-side Interface</div>
+                        <div class = "clear"></div>
+                    </div>
+                    <div class = "newPCInterContent" style="padding-left: 20px">
+                        <label> Processor-side Interface Name:</label>
+                        &nbsp
+                        <input placeholder = "Enter PC-side Interface Name" name = "newPCInterName" 
+                            id = "newPCInterName" class = "newPCInterName" required style="position: relative; width: 184px; ">
+                        <p></p>
+                        <label> Gateway IP Address:</label>
+                        &nbsp
+                        <input placeholder = "Enter Gateway IP Address" name = "newPCInterGatewayIP" 
+                            id = "newPCInterGatewayIP" class = "newPCInterGatewayIP" required style="position: relative; width: 184px; left: 69px">
+                        <p></p>
+                        <label> Local Interface IP Address: </label>
+                        &nbsp
+                        <input placeholder = "Enter Interface IP Address" name = "newPCInterLocalIP" 
+                            id = "newPCInterLocalIP" class = "newPCInterLocalIP" required style="position: relative; width: 184px; left:30px">
+                        <p></p>
+                    </div>
+                       
+                    <div class ="clearfix" style="position: relative; margin-left: 65%; top: 70%">
+                        <input  type = "reset" class = "resetbtn"></input>
+                        <button class = "addNewPCInterbtn" id = "addNewPCInterbtn">Add</button>
+                                               
+                    </div>
+                </div>
+            </form>  
+        </div>
+    <!--/. Add New PC Interface-->  
+
+     <!--network.xml Pop Up-->
+      <div id = 'networkxmlbtn' class = "modal">                                   
+        <span onclick = "document.getElementById('networkxmlbtn').style.display = 'none';" 
+            class = "close" id = "close">x</span>
+            <form class = "modal-content-networkxml animate">
+                <div class="title_content" style="float: none;">
+                    <div class="text_content">Processing Center</div>
+                    <button class = "addPCButton"
+                            id = "addPCButton">
+                    <i class = "fa fa-plus-square" style = "color: #3498db"> </i>
+                    </button>
+                </div>
+                <div class="processingCenterContainer" id = "processingCenterContainer" style= "height: 600px">
+                    <div class="networkTabMenu" id = "networkTabMenu">
+                    </div>
+                    <div class = "pcTabContentContainer" id = "pcTabContentContainer">
+                    </div>
+                </div>
+            </form>       
+      </div>
+    <!--/ network.xml Pop Up--> 
+
+    <!--ep.xml Pop Up-->
+      <div id = 'epxmlbtn' class = "modal">                                   
+        <span onclick = "document.getElementById('epxmlbtn').style.display = 'none';" 
+            class = "close" id = "close">x</span>
+            <form class = "epmodal-content animate">
+                <div class="title_content" style="float: none;">
+                    <div class="text_content">End Point</div>
+                    <button class = "addEPButton"
+                            id = "addEPButton" style = "width: 22px; height: 20px; top: 20px; position: absolute; left: 150px;">  
+                    <i class = "fa fa-plus-square" style = "color: #3498db"> </i>
+                    </button>
+                </div>
+                <div class="endPointContainer" id = "endPointContainer" style= "height: 600px">
+                    <div class="epTabMenu" id = "epTabMenu">
+                    </div>
+                    <div class = "epTabContentContainer" id = "epTabContentContainer">
+                    </div>
+                </div>
+            </form>       
+      </div>
+    <!--/ ep.xml Pop Up--> 
+
+    <!--Add New Access Point-->
+        <div id="addAPbtn" class="modal">
+            <span onclick = "document.getElementById('addAPbtn').style.display = 'none'"
+                class = "close" title = "closeModal">x</span>
+            <form class = "modal-content-addAPbtn animate">
+                <div class = "newAPContainer" id = "newAPContainer">
+                    <div class = "title_content">
+                        <div class = "text_content">Add New Access Point</div>
+                        <div class = "clear"></div>
+                    </div>
+                    <div class = "newAPContent">
+                        <label> Access Point ID:</label>
+                        &nbsp
+                        <input placeholder = "Enter Access Point ID" name = "newAPID" 
+                            id = "newAPID" class = "newAPID" required style="margin-left: 25px;">
+                            <p></p>
+                        <label> Access Point Name:</label>
+                        &nbsp
+                        <input placeholder = "Enter Access Point Name" name = "newAPName" 
+                            id = "newAPName" class = "newAPName" required>
+                            <p></p>
+                        <label> Session Policy </label>
+                            <select id = "newSessionPolicy" class = "newSessionPolicy" style="margin-left: 45px">
+                                
+                            </select>
+                    </div>
+                       
+                    <div class ="clearfix-newAP">
+                        <input  type = "reset" class = "resetbtn"></input>
+                        <button class = "addNewAPbtn" id = "addNewAPbtn">Add</button>
+                                               
+                    </div>
+                </div>
+            </form>  
+        </div>
+    <!--/. Add New Access Point-->    
+
+     <!--pc Interfaces Pop Up-->
+      <div id = 'pcMSbtn' class = "modal">                                   
+        <span onclick = "document.getElementById('pcMSbtn').style.display = 'none';" 
+            class = "close" id = "close">x</span>
+            <form class = "modal-content animate" style="width: 81%; top: 7%;">
+                <div class="title_content" style="float: none;">
+                    <div class="text_content">Management Systems</div>
+                </div>
+                <div class="pcMSContainer" id = "pcMSContainer" style ="height: 66%; padding-left: 10px; position: relative;">
+                    <div class="pcMSTabMenu" id = "pcMSTabMenu">
+                    </div>
+                    <div class = "pcMSTabContentContainer" id = "pcMSTabContentContainer">
+                    </div>
+                </div>
+            </form>       
+      </div>
+    <!--/ PC Interface Pop Up--> 
+
+    <!--Submit Button-->
+        <div id = 'submitbtn' class = "modal">                                   
+            <span onclick = "document.getElementById('submitbtn').style.display = 'none';" 
+                class = "close" id = "close">x</span>
+                <form class = "modal-content animate">
+                    <div class="title_content" style="float: none;">
+                        <div class="text_content">Review All Changes</div>
+                    </div>
+                    <div class="changesContainer" id = "changesContainer" style = "height: 70%">
+                   
+                </div>
+            </form>       
+      </div>
+      
+    <!--/. Submit Page-->
+
+      <!--EAS General Settings Pop Up-->
+    <div id = 'easGeneralSettingsbtn' class = "modal">                                   
+        <span onclick = "document.getElementById('easGeneralSettingsbtn').style.display = 'none';" 
+            class = "close" title = "closeModal">x</span>
+            <form class = "modal-content animate" >
+                <div class="title_content" style="float: none;">
+                    <div class="text_content">EAS General Settings</div>
+                    <div class="clear"></div>
+                </div>
+                <div class = "easGSContainer" id = "easGSContainer" style= "padding: 10px 30px 20px; height: 600px;">
+
+                </div>                         
+            </form>       
+    </div>
+    <!--/ EAS General Settings Pop Up-->
+
+    <!--Add New Routing Policy-->
+    <div id="addRoutingPolicybtn" class="modal">
+        <span onclick = "document.getElementById('addRoutingPolicybtn').style.display = 'none'"
+              class = "close" title = "closeModal">x</span>
+        <form class = "modal-content-addRPPopup animate">
+            <div class = "newRoutingPolicyContainer" id = "newRoutingPolicyContainer">
+                <div class = "title_content">
+                   <div class = "text_content">Add New Routing Policy</div>
+                   <div class = "clear"></div>
+                </div>
+                <div class="addRPPopup">
+                    <label> Routing Policy ID</label>
+                    <input placeholder = "Enter Routing Policy ID" 
+                        id = "newRPID" class = "newRPID" required>
+                    <p></p>
+                    <label> Routing Policy Name</label>
+                    <input placeholder = "Enter Routing Policy Name" 
+                        id = "newRPName" class = "newRPName" required>
+                </div>
+                <div class ="clearfix" style="margin-left:60%; margin-top: 9%">
+                    <input  type = "reset" class = "resetbtn"></input>
+                    <button class = "addNewRPbtn" id = "addNewRPbtn">Add</button>                           
+                </div>
+            </div>
+        </form>  
+    </div>
+    <!--/. Add Routing Policy--> 
+
+    <!--Add New PC Session Policy-->
+    <div id="addPCSessionPolicybtn" class="modal">
+        <span onclick = "document.getElementById('addPCSessionPolicybtn').style.display = 'none'"
+              class = "close" title = "closeModal">x</span>
+        <form class = "modal-content-addPCSessionPolicy animate">
+            <div class = "newPCSessionPolicyContainer" id = "newPCSessionPolicyContainer">
+                <div class = "title_content">
+                   <div class = "text_content">Add New PC Session Policy</div>
+                   <div class = "clear"></div>
+                </div>
+                <div class="addPCSessionPolicyContent" style="margin-left: 20px">
+                    <label> PC Session Policy ID:</label>
+                    <input placeholder = "Enter Routing Policy ID" 
+                        id = "newPCSPID" class = "newPCSPID" required style="position: relative; left: 25px">
+                    <p></p>
+                    <label> PC Session Policy Name:</label>
+                    <input placeholder = "Enter Routing Policy Name" 
+                        id = "newPCSPName" class = "newPCSPName" required>
+                    <p></p>
+                </div>
+                <div class ="clearfix" style="margin-left: 58%">
+                    <input  type = "reset" class = "resetbtn"></input>
+                    <button class = "addNewPCSessionPolicybtn" id = "addNewPCSessionPolicybtn">Add</button>                           
+                </div>
+            </div>
+        </form>  
+    </div>
+    <!--/. Add New PC Session Policy--> 
+
+    <!--Add New EP Session Policy-->
+    <div id="addEPSessionPolicybtn" class="modal">
+        <span onclick = "document.getElementById('addEPSessionPolicybtn').style.display = 'none'"
+              class = "close" title = "closeModal">x</span>
+        <form class = "modal-content animate" style="width: 30%; top: 3%;">
+            <div class = "newRoutingPolicyContainer" id = "newRoutingPolicyContainer">
+                <div class = "title_content">
+                   <div class = "text_content">Add New EP Session Policy</div>
+                   <div class = "clear"></div>
+                </div>
+                <div class="newEPSessionSettings" style="position: relative; left: 20px">
+                    <label> EP Session Policy ID:</label>
+                    <input style ="position:relative; left: 24px;"  placeholder = "Enter Routing Policy ID" 
+                        id = "newEPSPID" class = "newEPSPID" required>
+                    <p></p>
+                    <label> EP Session Policy Name:</label>
+                    <input placeholder = "Enter Routing Policy Name" 
+                        id = "newEPSPName" class = "newEPSPName" required>
+                    <p></p>
+                </div>
+                <div class ="clearfix" style="margin-left: 57%; ">
+                    <input  type = "reset" class = "resetbtn"></input>
+                    <button class = "addNewEPSessionPolicybtn" id = "addNewEPSessionPolicybtn">Add</button>                           
+                </div>
+            </div>
+        </form>  
+    </div>
+    <!--/. Add New EP Session Policy-->
+
+        <!--Add New Processing Center-->
+        <div id="addProcessingCenterbtn" class="modal">
+            <span onclick = "document.getElementById('addProcessingCenterbtn').style.display = 'none'"
+                class = "close" title = "closeModal">x</span>
+            <form class = "modal-content-newPC animate">
+                <div class = "newProcessingCenterContainer" id = "newProcessingCenterContainer">
+                    <div class = "title_content">
+                        <div class = "text_content">Add New Processing Center</div>
+                        <div class = "clear"></div>
+                    </div>
+                    <label style = "padding-left: 20px"> Network Group Name: </label>
+                    <select class = "newNetworkGroupNameSelector" id = "newNetworkGroupNameSelector">
+                    </select>
+                    <p></p>
+                    <div class ="clearfix-newPCPopup">
+                        <input  type = "reset" class = "resetbtn"></input>
+                        <button class = "addNewPCbtn" id = "addNewPCbtn">Add</button>
+                                               
+                    </div>
+                </div>
+            </form>  
+        </div>
+        <!--/. Add New Processing Center-->  
+        
+        <!--Add New End Point-->
+        <div id="addEndPointbtn" class="modal">
+            <span onclick = "document.getElementById('addEndPointbtn').style.display = 'none'"
+                class = "close" title = "closeModal">x</span>
+            <form class = "modal-content-addNewEndpoint animate">
+                <div class = "newEndPointContainer" id = "newEndPointContainer">
+                    <div class = "title_content">
+                        <div class = "addNewEndpointTitle">Add New Endpoint</div>
+                        <div class = "clear"></div>
+                    </div>
+                    <label> New Endpoint ID:</label>
+                    <input placeholder = "Enter Endpoint ID" 
+                        id = "newEndpointIDInput" class = "newEndpointIDInput" required style = "position: absolute; left: 161px">
+                    <p></p>
+                    <label> New Endpoint Name:</label>
+                    <input placeholder = "Enter Endpoint Name" 
+                        id = "newEndpointNameInput" class = "newEndpointNameInput" required>
+                    <p></p>
+                    <div class ="ep-clearfix">
+                        <input  type = "reset" class = "resetbtn"></input>
+                        <button class = "addNewEPbtn" id = "addNewEPbtn">Add</button>
+                                               
+                    </div>
+                </div>
+            </form>  
+        </div>
+        <!--/. Add New End Point-->  
+
+        <!--Add New PCR-->
+        <div id="addPCRbtn" class="modal">
+            <span onclick = "document.getElementById('addPCRbtn').style.display = 'none'"
+                class = "close" title = "closeModal">x</span>   
+        </div>
+        <!--/. Add New PCR --> 
+
+        <!--Add New Station Group-->
+        <div id="addSGbtn" class="modal">
+            <span onclick = "document.getElementById('addSGbtn').style.display = 'none'"
+                class = "close" title = "closeModal">x</span> 
+        </div>
+        <!--/. Add New Station Group --> 
+
+        <!--Add New Network Address-->
+        <div id="addNetworkAddressbtn" class="modal">
+            <span onclick = "document.getElementById('addNetworkAddressbtn').style.display = 'none'"
+                class = "close" title = "closeModal">x</span>
+        </div>
+        <!--/. Add New Processing Center--> 
+
+  <script type="text/javascript" src="/js/jquery-2.2.4.min.js"></script>
+  <script type = "text/javascript" src = "/js/efs.js"> </script>
+  <script type = "text/javascript" src = "/js/ems.js"> </script>
+  <script type = "text/javascript" src = "/js/main.js"> </script>
+
+  <script type = "text/javascript" src = "/js/easGeneralSettings.js"> </script>
+  <script type = "text/javascript" src = "/js/routingxml1.js"> </script>
+  <script type = "text/javascript" src = "/js/networkxml1.js"> </script>
+  <script type = "text/javascript" src = "/js/pcdefaultxml.js"> </script>
+  <script type = "text/javascript" src = "/js/epdefault.js"> </script>
+  <script type = "text/javascript" src = "/js/pcxml.js"> </script>
+  <script type = "text/javascript" src = "/js/epxml.js"> </script>
+  <script type = "text/javascript" src = "/js/pcInterface.js"> </script>
+  <script type = "text/javascript" src = "/js/epInterface.js"> </script>
+  <script type = "text/javascript" src = "/js/submitPage.js"> </script>
+  <script type = "text/javascript" src = "/js/jquery.dataTables.min.js"> </script>
+  <script type = "text/javascript" src = "/js/pcMS.js"> </script>
+  <script type = "text/javascript" src = "/js/postData.js"> </script>
